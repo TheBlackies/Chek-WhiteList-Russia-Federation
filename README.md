@@ -15,4 +15,4 @@
 
 ---
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TheBlackies/Chek-WL/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TheBlackies/Chek-WhiteList-Russia-Federation/blob/main/LICENSE)
