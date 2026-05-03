@@ -5,8 +5,8 @@ main_hosts = {
 	"Google": "google.com",
 	"GitHub": "github.com",
 	"Pinterest": "pinterest.com",
-	# "Backit": "backit.me", изменить хост т.к. работает при БС
-	# "Proglib": "proglib.io", изменить хост т.к. работает при БС
+	"GitLab": "gitlab.com",
+	"Docker": "docker.com",
 	"Gitea": "about.gitea.com",
 	"Oxk": "okx.com",
 	"GitBook": "app.gitbook.com",
@@ -15,7 +15,7 @@ main_hosts = {
 }
 
 WhiteList_host = {
-  "Max" : "max.ru",
+  "Max" : "web.max.ru",
   "Yandex" : "ya.ru",
   "Vk" : "vk.ru",
   "Avito" : "avito.ru",
