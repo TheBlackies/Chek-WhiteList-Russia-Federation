@@ -2,16 +2,16 @@ from ping3 import ping
 import time
 
 en_hosts = {
-	"Google": "google.com",
-	"GitHub": "github.com",
-	"Pinterest": "pinterest.com",
-	"GitLab": "gitlab.com",
-	"Docker": "docker.com",
-	"Gitea": "about.gitea.com",
-	"Oxk": "okx.com",
-	"GitBook": "app.gitbook.com",
-	"Dropbox": "dropbox.com",
-	"Pixlr": "pixlr.com"
+  "Google": "google.com",
+  "GitHub": "github.com",
+  "Pinterest": "pinterest.com",
+  "GitLab": "gitlab.com",
+  "Docker": "docker.com",
+  "Gitea": "about.gitea.com",
+  "Oxk": "okx.com",
+  "GitBook": "app.gitbook.com",
+  "Dropbox": "dropbox.com",
+  "Pixlr": "pixlr.com"
 }
 
 ru_hosts = {
