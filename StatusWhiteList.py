@@ -1,7 +1,7 @@
 from ping3 import ping
 import time
 
-main_hosts = {
+en_hosts = {
 	"Google": "google.com",
 	"GitHub": "github.com",
 	"Pinterest": "pinterest.com",
@@ -12,6 +12,20 @@ main_hosts = {
 	"GitBook": "app.gitbook.com",
 	"Dropbox": "dropbox.com",
 	"Pixlr": "pixlr.com"
+}
+
+ru_hosts = {
+  "Tproger": "tproger.ru",
+  "Teremok": "teremok.ru", # Заменить на другой
+  "Mega": "mega.ru",
+  "Shoko": "shoko.ru",
+  "Zenden": "zenden.ru",
+  "Tvoe": "tvoe.ru",
+  "Cyberlenika": "cyberleninka.ru",
+  "Pikabu": "pikabu.ru", # Заменить на другой
+  "DNS": "dns-shop.ru",
+  "Mvideo": "mvideo.ru"
+  # Данный список не точен и требует отдельной проверки
 }
 
 WhiteList_host = {
@@ -27,6 +41,17 @@ WhiteList_host = {
   "2Gis" : "2gis.ru"
 }
 
+while True:
+  host_check = input("Какие домены будем пинговать? 1 - EN. 2 - RU. Ваш выбор (бета-версия): ")
+
+  if host_check == "1":
+    host_check = en_hosts
+    break
+  elif host_check == "2":
+    host_check = ru_hosts
+    break
+  else:
+    print("Пожалуйста, введите либо 1 - EN, либо 2 - RU")
 
 def check_hosts(host_dict):
   all_ok = True
@@ -40,14 +65,14 @@ def check_hosts(host_dict):
   return all_ok
 
 print("Пингую сайты...\n" + "-" * 40)
-all_main_ok = check_hosts(main_hosts)
+all_main_ok = check_hosts(host_check)
 print("-" * 40)
 
 if all_main_ok:
   print("✅ Все основные хосты доступны. Вы вне зоне действий БС.")
 
 elif not all_main_ok:
-  any_main_available = any(ping(host) not in [None, False] for host in main_hosts.values())
+  any_main_available = any(ping(host) not in [None, False] for host in host_check.values())
   
   if any_main_available:
     print("⚠️ Часть основных хостов недоступна. Возможны блокировки.")
