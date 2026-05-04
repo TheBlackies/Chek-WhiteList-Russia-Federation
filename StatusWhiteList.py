@@ -23,8 +23,8 @@ ru_hosts = {
   "Tvoe": "tvoe.ru",
   "Cyberlenika": "cyberleninka.ru",
   "Pikabu": "pikabu.ru", # Заменить на другой
-  "DNS": "dns-shop.ru",
-  "Mvideo": "mvideo.ru"
+  # "DNS": "dns-shop.ru", Заменить на другой т.к. работает при БС
+  # "Mvideo": "mvideo.ru" Заменить на другой т.к. работает при БС
   # Данный список не точен и требует отдельной проверки
 }
 
