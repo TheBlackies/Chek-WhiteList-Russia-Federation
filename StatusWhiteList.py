@@ -16,14 +16,14 @@ en_hosts = {
 
 ru_hosts = {
   "Tproger": "tproger.ru",
-  "Teremok": "teremok.ru", # Заменить на другой
+  "Woordhunt": "wooordhunt.ru",
   "Mega": "mega.ru",
   "Shoko": "shoko.ru",
   "Zenden": "zenden.ru",
   "Tvoe": "tvoe.ru",
   "Cyberlenika": "cyberleninka.ru",
   "Pikabu": "pikabu.ru", # Заменить на другой
-  # "DNS": "dns-shop.ru", Заменить на другой т.к. работает при БС
+  "Health-Diet": "health-diet.ru",
   # "Mvideo": "mvideo.ru" Заменить на другой т.к. работает при БС
   # Данный список не точен и требует отдельной проверки
 }
@@ -49,6 +49,7 @@ while True:
     break
   elif host_check == "2":
     host_check = ru_hosts
+    print("Внимание, данный RU список находится в бете.")
     break
   else:
     print("Пожалуйста, введите либо 1 - EN, либо 2 - RU")
