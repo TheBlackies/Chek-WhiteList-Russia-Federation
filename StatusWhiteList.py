@@ -22,9 +22,9 @@ ru_hosts = {
   "Zenden": "zenden.ru",
   "Tvoe": "tvoe.ru",
   "Cyberlenika": "cyberleninka.ru",
-  "Pikabu": "pikabu.ru", # Заменить на другой
+  "Businessmens": "businessmens.ru",
   "Health-Diet": "health-diet.ru",
-  # "Mvideo": "mvideo.ru" Заменить на другой т.к. работает при БС
+  "Kwork": "kwork.ru"
   # Данный список не точен и требует отдельной проверки
 }
 
@@ -55,43 +55,39 @@ while True:
     print("Пожалуйста, введите либо 1 - EN, либо 2 - RU")
 
 def check_hosts(host_dict):
-  all_ok = True
+  failed = 0
+  total = len(host_dict)
   for name, address in host_dict.items():
     response = ping(address)
     if response is not None and response is not False:
       print(f'✅ {name:10} — {response:.3f} сек ({address})')
     else:
       print(f"❌ {name:10} — недоступен ({address})")
-      all_ok = False
-  return all_ok
+      failed += 1
+  return failed, total
 
 print("Пингую сайты...\n" + "-" * 40)
-all_main_ok = check_hosts(host_check)
+failed, total = check_hosts(host_check)
 print("-" * 40)
 
-if all_main_ok:
+if failed == 0:
   print("✅ Все основные хосты доступны. Вы вне зоне действий БС.")
 
-elif not all_main_ok:
-  any_main_available = any(ping(host) not in [None, False] for host in host_check.values())
+elif failed < total / 2:
+  print(f"⚠️ Часть основных хостов недоступна ({failed}/{total}). Возможны блокировки.")
+
+else:
+  print(f"\n❌ Большинство основных хостов недоступно ({failed}/{total})! Проверяю Белые Списки:")
+  print("-" * 40)
+  failed_w, total_w = check_hosts(WhiteList_host)
+  print("-" * 40)
   
-  if any_main_available:
-    print("⚠️ Часть основных хостов недоступна. Возможны блокировки.")
+  if failed_w == 0:
+    print("✅ Белые Списки работают! Вы находитесь в зоне БС.")
+  elif failed_w < total_w / 2:
+    print(f"⚠️ Часть Белых Списков доступна ({total_w - failed_w}/{total_w}). Проблемы с сетью или частичные блокировки.")
   else:
-    print("\n❌ Основной список хостов недоступен! Проверяю Белые Списки:")
-    print("-" * 40)
-    all_white_ok = check_hosts(WhiteList_host)
-    print("-" * 40)
-    
-    if all_white_ok:
-      print("✅ Белые Списки работают! Вы находитесь в зоне БС.")
-    else:
-      any_white_available = any(ping(host) not in [None, False] for host in WhiteList_host.values())
-      
-      if any_white_available:
-        print("⚠️ Часть Белых Списков доступна. Проблемы с сетью или частичные блокировки.")
-      else:
-        print("⚠️ Интернет не работает. Проверьте интернет соединение.")
+    print("⚠️ Интернет не работает. Проверьте интернет соединение.")
 
 print("Скрипт завершен. Закрытие через 10 секунд...")
 time.sleep(10)
