@@ -15,7 +15,7 @@
 <br>
 [EN docs ping3](https://github.com/kyan001/ping3/blob/master/README.md)
 
-Взято с [РУ документация ping3](https://github.com/kyan001/ping3/blob/master/README.ru.md)
+Взято с [РУ документация ping3](https://github.com/kyan001/ping3/blob/master/README.ru.md):
 >Если вы получили ошибку «permission denied», возможно, потребуется запустить программу с правами суперпользователя. Также см. это [руководство](https://github.com/kyan001/ping3/blob/master/TROUBLESHOOTING.md#permission-denied-on-linux) по устранению неполадок на Linux.
 
 ---
