@@ -12,6 +12,7 @@
 Команда для установки ping3: pip install ping3
 
 [РУ документация ping3](https://github.com/kyan001/ping3/blob/master/README.ru.md)
+<br>
 [EN docs ping3](https://github.com/kyan001/ping3/blob/master/README.md)
 
 Взято с [РУ документация ping3](https://github.com/kyan001/ping3/blob/master/README.ru.md)
