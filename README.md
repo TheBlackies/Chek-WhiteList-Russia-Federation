@@ -1,7 +1,23 @@
 # Простой скрипт проверяет активны ли Белые Списки РФ в вашем месторасположении
+# Простой скрипт проверяет активны ли Белые Списки РФ в вашем месторасположении
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TheBlackies/Chek-WhiteList-Russia-Federation/blob/main/LICENSE)
+
+### Для использования скрипта нужны:
+
+**Язык программирования Python 3 версии** - [Официальный сайт Python](https://www.python.org/)
+
+**Зависимость ping3** - [Ping3 github](https://github.com/kyan001/ping3/tree/master)
+
+Команда для установки ping3: pip install ping3
+
+[РУ документация ping3](https://github.com/kyan001/ping3/blob/master/README.ru.md)
+<br>
+[EN docs ping3](https://github.com/kyan001/ping3/blob/master/README.md)
+
+Взято с [РУ документация ping3](https://github.com/kyan001/ping3/blob/master/README.ru.md):
+>Если вы получили ошибку «permission denied», возможно, потребуется запустить программу с правами суперпользователя. Также см. это [руководство](https://github.com/kyan001/ping3/blob/master/TROUBLESHOOTING.md#permission-denied-on-linux) по устранению неполадок на Linux.
 
 ### Для использования скрипта нужны:
 
