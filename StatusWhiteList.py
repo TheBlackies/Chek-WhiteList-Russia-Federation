@@ -25,7 +25,6 @@ ru_hosts = {
   "Businessmens": "businessmens.ru",
   "Health-Diet": "health-diet.ru",
   "Kwork": "kwork.ru"
-  # Данный список не точен и требует отдельной проверки
 }
 
 WhiteList_host = {
@@ -42,14 +41,15 @@ WhiteList_host = {
 }
 
 while True:
-  host_check = input("Какие домены будем пинговать? 1 - EN. 2 - RU. Ваш выбор (бета-версия): ")
+  host_check = input("Какие домены будем пинговать? 1 - EN. 2 - RU. Введите число: ")
 
   if host_check == "1":
     host_check = en_hosts
+    print("Внимание, некоторые сайты могут попасть под блокировку РКН, тем самым список может быть не точен.")
     break
   elif host_check == "2":
     host_check = ru_hosts
-    print("Внимание, данный RU список находится в бете.")
+    print("Внимание, некоторые сайты могут быть неактуальны и требовать проверку на актуальность со временем.")
     break
   else:
     print("Пожалуйста, введите либо 1 - EN, либо 2 - RU")
